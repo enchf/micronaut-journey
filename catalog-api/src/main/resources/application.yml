@@ -3,10 +3,20 @@ micronaut:
     name: catalogApi
 datasources:
   default:
+    url: "jdbc:postgresql://localhost:5452/postgres"
+    username: postgres
+    password: postgres
     driverClassName: org.postgresql.Driver
-    db-type: postgresql
-    schema-generate: CREATE_DROP
-    dialect: POSTGRES
+jpa:
+  default:
+    entity-scan:
+      packages:
+        - com.gjug.micronaut.domain
+    properties:
+      hibernate:
+        show_sql: false
+        dialect: org.hibernate.dialect.PostgreSQL95Dialect
+        enable_lazy_load_no_trans: true
 netty:
   default:
     allocator:

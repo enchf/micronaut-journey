@@ -6,6 +6,10 @@
 - [Micronaut Guides](https://guides.micronaut.io/index.html)
 ---
 
+## Database instantiation
+
+`docker run --name catalog-db -e POSTGRES_PASSWORD=postgres -p 5452:5432 -d postgres`
+
 ## Feature test-resources documentation
 
 - [Micronaut Test Resources documentation](https://micronaut-projects.github.io/micronaut-test-resources/latest/guide/)
