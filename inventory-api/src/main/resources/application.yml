@@ -1,0 +1,9 @@
+micronaut:
+  application:
+    name: inventoryApi
+  server:
+    port: 8085
+netty:
+  default:
+    allocator:
+      max-order: 3

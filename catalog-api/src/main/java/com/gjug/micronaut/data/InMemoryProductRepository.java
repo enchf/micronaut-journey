@@ -8,7 +8,7 @@ import java.util.*;
 @Singleton
 public class InMemoryProductRepository implements ProductRepository {
 
-    private SortedMap<Long, Product> products = new TreeMap<>();
+    private final SortedMap<Long, Product> products = new TreeMap<>();
 
     @Override
     public List<Product> findAll() {
@@ -23,7 +23,7 @@ public class InMemoryProductRepository implements ProductRepository {
     @Override
     public Product save(Product product) {
         if (product.getId() == null) {
-            Long newKey = products.isEmpty() ? 1L : products.lastKey();
+            Long newKey = products.isEmpty() ? 1L : products.lastKey() + 1L;
             product.setId(newKey);
         }
         products.put(product.getId(), product);

@@ -3,7 +3,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.gjug.micronaut</groupId>
-  <artifactId>catalog-api</artifactId>
+  <artifactId>inventory-api</artifactId>
   <version>0.1</version>
   <packaging>${packaging}</packaging>
 
@@ -18,9 +18,7 @@
     <jdk.version>11</jdk.version>
     <release.version>11</release.version>
     <micronaut.version>3.7.0</micronaut.version>
-    <micronaut.test.resources.enabled>true</micronaut.test.resources.enabled>
     <micronaut.runtime>netty</micronaut.runtime>
-    <micronaut.data.version>3.8.0</micronaut.data.version>
     <exec.mainClass>com.gjug.micronaut.Application</exec.mainClass>
   </properties>
 
@@ -53,30 +51,14 @@
       <scope>compile</scope>
     </dependency>
     <dependency>
-      <groupId>io.micronaut</groupId>
-      <artifactId>micronaut-jackson-databind</artifactId>
-      <scope>compile</scope>
-    </dependency>
-    <dependency>
       <groupId>io.micronaut.kafka</groupId>
       <artifactId>micronaut-kafka</artifactId>
       <scope>compile</scope>
     </dependency>
     <dependency>
-      <groupId>io.micronaut.reactor</groupId>
-      <artifactId>micronaut-reactor</artifactId>
+      <groupId>io.micronaut</groupId>
+      <artifactId>micronaut-jackson-databind</artifactId>
       <scope>compile</scope>
-    </dependency>
-    <dependency>
-      <groupId>io.micronaut.reactor</groupId>
-      <artifactId>micronaut-reactor-http-client</artifactId>
-      <scope>compile</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.awaitility</groupId>
-      <artifactId>awaitility</artifactId>
-      <version>4.2.0</version>
-      <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>jakarta.annotation</groupId>
@@ -136,11 +118,6 @@
               <version>${micronaut.version}</version>
             </path>
             <path>
-              <groupId>io.micronaut.data</groupId>
-              <artifactId>micronaut-data-processor</artifactId>
-              <version>${micronaut.data.version}</version>
-            </path>
-            <path>
               <groupId>io.micronaut</groupId>
               <artifactId>micronaut-graal</artifactId>
               <version>${micronaut.version}</version>
@@ -158,7 +135,7 @@
           </annotationProcessorPaths>
           <compilerArgs>
             <arg>-Amicronaut.processing.group=com.gjug.micronaut</arg>
-            <arg>-Amicronaut.processing.module=catalog-api</arg>
+            <arg>-Amicronaut.processing.module=inventory-api</arg>
           </compilerArgs>
         </configuration>
       </plugin>
