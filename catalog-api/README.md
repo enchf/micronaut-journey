@@ -1,35 +1,9 @@
-## Micronaut 3.7.0 Documentation
+# Catalog API
 
-- [User Guide](https://docs.micronaut.io/3.7.0/guide/index.html)
-- [API Reference](https://docs.micronaut.io/3.7.0/api/index.html)
-- [Configuration Reference](https://docs.micronaut.io/3.7.0/guide/configurationreference.html)
-- [Micronaut Guides](https://guides.micronaut.io/index.html)
----
+## Details
 
-## Feature test-resources documentation
+* The application maintain a product catalog, with simple CRUD operations.
+* This application is intended for the product details, such as descriptions, images, etc.
+* The application will use a transactional SQL database.
 
-- [Micronaut Test Resources documentation](https://micronaut-projects.github.io/micronaut-test-resources/latest/guide/)
-
-
-## Feature lombok documentation
-
-- [Micronaut Project Lombok documentation](https://docs.micronaut.io/latest/guide/index.html#lombok)
-
-- [https://projectlombok.org/features/all](https://projectlombok.org/features/all)
-
-
-## Feature http-client documentation
-
-- [Micronaut HTTP Client documentation](https://docs.micronaut.io/latest/guide/index.html#httpClient)
-
-
-## Feature jdbc-hikari documentation
-
-- [Micronaut Hikari JDBC Connection Pool documentation](https://micronaut-projects.github.io/micronaut-sql/latest/guide/index.html#jdbc)
-
-
-## Feature hibernate-jpa documentation
-
-- [Micronaut Hibernate JPA documentation](https://micronaut-projects.github.io/micronaut-sql/latest/guide/index.html#hibernate)
-
-
+## Running the Application
