@@ -7,3 +7,10 @@ netty:
   default:
     allocator:
       max-order: 3
+
+#tag::kafka[]
+kafka:
+  bootstrap:
+    servers: localhost:9092
+#end::kafka[]
+

@@ -2,6 +2,7 @@ package com.gjug.micronaut.controller;
 
 import com.gjug.micronaut.data.ProductRepository;
 import com.gjug.micronaut.domain.Product;
+import com.gjug.micronaut.integration.ProductPublisher;
 import io.micronaut.http.HttpResponse;
 import io.micronaut.http.MediaType;
 import io.micronaut.http.annotation.*;
@@ -14,6 +15,9 @@ public class ProductController {
 
     @Inject
     private ProductRepository productRepository;
+
+    @Inject
+    private ProductPublisher productPublisher;
 
     @Get(uri = "/", produces = MediaType.APPLICATION_JSON)
     public HttpResponse<List<Product>> findAll() {
