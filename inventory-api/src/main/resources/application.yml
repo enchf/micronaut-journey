@@ -14,3 +14,7 @@ kafka:
     servers: localhost:9092
 #end::kafka[]
 
+consul:
+  client:
+    registration:
+      enabled: true

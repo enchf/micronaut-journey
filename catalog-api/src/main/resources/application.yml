@@ -11,3 +11,8 @@ jpa.default.properties.hibernate.hbm2ddl.auto: update
 kafka:
   enabled: true
 #end::kafka[]
+
+consul:
+  client:
+    registration:
+      enabled: true

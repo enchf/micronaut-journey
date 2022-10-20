@@ -1,0 +1,14 @@
+micronaut:
+  application:
+    name: catalog-api
+  config-client:
+    enabled: true
+consul:
+  client:
+    config:
+      enabled: true
+      format: yaml
+      defaultZone: «${CONSUL_HOST:localhost}:${CONSUL_PORT:8500}»
+      path: "config/catalog-api/"
+    registration:
+      enabled: true

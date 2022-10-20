@@ -1,0 +1,9 @@
+ribbon:
+  VipAddress: test
+  ServerListRefreshInterval: 2000
+netty:
+  default:
+    allocator:
+      max-order: 3
+consul.client.registration.enabled: true
+hystrix.stream.enabled: false

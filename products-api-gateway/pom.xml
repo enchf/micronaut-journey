@@ -3,24 +3,22 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.gjug.micronaut</groupId>
-  <artifactId>catalog-api</artifactId>
+  <artifactId>products-api-gateway</artifactId>
   <version>0.1</version>
   <packaging>${packaging}</packaging>
 
   <parent>
     <groupId>io.micronaut</groupId>
     <artifactId>micronaut-parent</artifactId>
-    <version>3.7.0</version>
+    <version>3.7.2</version>
   </parent>
 
   <properties>
     <packaging>jar</packaging>
     <jdk.version>11</jdk.version>
     <release.version>11</release.version>
-    <micronaut.version>3.7.0</micronaut.version>
-    <micronaut.test.resources.enabled>true</micronaut.test.resources.enabled>
+    <micronaut.version>3.7.2</micronaut.version>
     <micronaut.runtime>netty</micronaut.runtime>
-    <micronaut.data.version>3.8.0</micronaut.data.version>
     <exec.mainClass>com.gjug.micronaut.Application</exec.mainClass>
   </properties>
 
@@ -58,30 +56,24 @@
       <scope>compile</scope>
     </dependency>
     <dependency>
-      <groupId>io.micronaut.kafka</groupId>
-      <artifactId>micronaut-kafka</artifactId>
-      <scope>compile</scope>
-    </dependency>
-    <dependency>
-      <groupId>io.micronaut.reactor</groupId>
-      <artifactId>micronaut-reactor</artifactId>
-      <scope>compile</scope>
-    </dependency>
-    <dependency>
-      <groupId>io.micronaut.reactor</groupId>
-      <artifactId>micronaut-reactor-http-client</artifactId>
-      <scope>compile</scope>
-    </dependency>
-    <dependency>
       <groupId>io.micronaut.discovery</groupId>
       <artifactId>micronaut-discovery-client</artifactId>
-      <version>3.2.0</version>
+      <scope>compile</scope>
     </dependency>
     <dependency>
-      <groupId>org.awaitility</groupId>
-      <artifactId>awaitility</artifactId>
-      <version>4.2.0</version>
-      <scope>test</scope>
+      <groupId>io.micronaut.netflix</groupId>
+      <artifactId>micronaut-netflix-hystrix</artifactId>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>io.micronaut.netflix</groupId>
+      <artifactId>micronaut-netflix-ribbon</artifactId>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>io.swagger.core.v3</groupId>
+      <artifactId>swagger-annotations</artifactId>
+      <scope>compile</scope>
     </dependency>
     <dependency>
       <groupId>jakarta.annotation</groupId>
@@ -141,11 +133,6 @@
               <version>${micronaut.version}</version>
             </path>
             <path>
-              <groupId>io.micronaut.data</groupId>
-              <artifactId>micronaut-data-processor</artifactId>
-              <version>${micronaut.data.version}</version>
-            </path>
-            <path>
               <groupId>io.micronaut</groupId>
               <artifactId>micronaut-graal</artifactId>
               <version>${micronaut.version}</version>
@@ -160,10 +147,15 @@
               <artifactId>micronaut-validation</artifactId>
               <version>${micronaut.version}</version>
             </path>
+            <path>
+              <groupId>io.micronaut.openapi</groupId>
+              <artifactId>micronaut-openapi</artifactId>
+              <version>${micronaut.openapi.version}</version>
+            </path>
           </annotationProcessorPaths>
           <compilerArgs>
             <arg>-Amicronaut.processing.group=com.gjug.micronaut</arg>
-            <arg>-Amicronaut.processing.module=catalog-api</arg>
+            <arg>-Amicronaut.processing.module=products-api-gateway</arg>
           </compilerArgs>
         </configuration>
       </plugin>
